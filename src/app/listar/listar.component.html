@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Título</td>
+                <td>Descrição</td>
+                <td>Preço</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaProdutos">
+                <td>{{p.title}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <button (click)="removerProduto(p._id)">Remover</button>
+                <button routerLink="/atualizar/{{p._id}}">Atualizar</button>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <app-cadastrar></app-cadastrar>
+</div>
